@@ -38,7 +38,7 @@ public class PilaTest {
 		assertThat(resultado,is(2));
 	}
 	@Test
-	public void AgregarUnoYPopEsUno(){
+	public void AgregarUnoYPopEsUno() throws Exception{
 		Pila pila= new Pila();
 		pila.agregarNumero(1);
 		int resultado = pila.pop();
@@ -46,7 +46,7 @@ public class PilaTest {
 	}
 	
 	@Test
-	public void AgregarUnoYDosYPopEsDos(){
+	public void AgregarUnoYDosYPopEsDos() throws Exception{
 		Pila pila= new Pila();
 		pila.agregarNumero(1);
 		pila.agregarNumero(2);
@@ -54,7 +54,7 @@ public class PilaTest {
 		assertThat(resultado,is(2));
 	}
 	@Test
-	public void AgregarTresYCuatroYPopDosVecesEsCuatroYTres(){
+	public void AgregarTresYCuatroYPopDosVecesEsCuatroYTres() throws Exception{
 		Pila pila= new Pila();
 		pila.agregarNumero(3);
 		pila.agregarNumero(4);
@@ -63,7 +63,12 @@ public class PilaTest {
 		resultado+= pila.pop();
 		assertThat(resultado,is("43"));
 	}
-	
+	@Test (expected=Exception.class)
+	public void popAStackVacioError() throws Exception{
+		Pila pila= new Pila();
+		int resultado = pila.pop();
+		
+	}
 	
 	
 

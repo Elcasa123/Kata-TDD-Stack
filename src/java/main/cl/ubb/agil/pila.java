@@ -27,9 +27,11 @@ public class Pila {
 		return posicion+1;
 	}
 	
-	public int pop(){
-		
-		return arreglo[posicion--];
+	public int pop() throws Exception{
+		if(estaVacio())
+			throw new Exception("Error stack Vacio");
+		else
+			return arreglo[posicion--];
 	}
 
 }
