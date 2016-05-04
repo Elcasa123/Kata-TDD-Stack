@@ -38,6 +38,13 @@ public class PilaTest {
 		assertThat(resultado,is(2));
 	}
 	
+	public void AgregarUnoYPopEsUno(){
+		Pila pila= new Pila();
+		pila.agregarNumero(1);
+		int resultado = pila.pop();
+		assertThat(resultado,is(1));
+	}
+	
 	
 	
 

@@ -26,5 +26,10 @@ public class Pila {
 	public int tamano(){
 		return posicion+1;
 	}
+	
+	public int pop(){
+		
+		return arreglo[posicion--];
+	}
 
 }
