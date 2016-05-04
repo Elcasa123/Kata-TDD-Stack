@@ -23,6 +23,8 @@ public class Pila {
 			arreglo[posicion]=numero;
 	}
 	
-	
+	public int tamano(){
+		return posicion+1;
+	}
 
 }

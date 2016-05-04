@@ -29,6 +29,15 @@ public class PilaTest {
 		boolean resultado = pila.estaVacio();
 		assertThat(resultado,is(false));
 	}
+	@Test
+	public void AgregarUnoYDosTamanoStackEsDos(){
+		Pila pila= new Pila();
+		pila.agregarNumero(1);
+		pila.agregarNumero(2);
+		int resultado = pila.tamano();
+		assertThat(resultado,is(2));
+	}
+	
 	
 	
 
