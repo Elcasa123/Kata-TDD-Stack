@@ -37,12 +37,21 @@ public class PilaTest {
 		int resultado = pila.tamano();
 		assertThat(resultado,is(2));
 	}
-	
+	@Test
 	public void AgregarUnoYPopEsUno(){
 		Pila pila= new Pila();
 		pila.agregarNumero(1);
 		int resultado = pila.pop();
 		assertThat(resultado,is(1));
+	}
+	
+	@Test
+	public void AgregarUnoYDosYPopEsDos(){
+		Pila pila= new Pila();
+		pila.agregarNumero(1);
+		pila.agregarNumero(2);
+		int resultado = pila.pop();
+		assertThat(resultado,is(2));
 	}
 	
 	
