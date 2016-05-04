@@ -12,5 +12,18 @@ public class PilaTest {
 		boolean resultado = pila.estaVacio();
 		assertThat(resultado,is(true));
 	}
+	
+	
+	@Test
+	public void AgregarUnoStackNoVacio(){
+		Pila pila= new Pila();
+		pila.agregarNumero(1);
+		boolean resultado = pila.estaVacio();
+		assertThat(resultado,is(false));
+	}
+	
+	
+	
+	
 
 }

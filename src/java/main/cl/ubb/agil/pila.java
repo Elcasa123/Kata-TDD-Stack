@@ -17,5 +17,12 @@ public class Pila {
 		else
 			return false;
 	}
+	
+	public void agregarNumero(int numero){
+			posicion++;
+			arreglo[posicion]=numero;
+	}
+	
+	
 
 }
