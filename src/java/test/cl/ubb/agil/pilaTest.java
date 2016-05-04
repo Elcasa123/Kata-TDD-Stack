@@ -22,7 +22,13 @@ public class PilaTest {
 		assertThat(resultado,is(false));
 	}
 	
-	
+	public void AgregarUnoYDosStackNoVacio(){
+		Pila pila= new Pila();
+		pila.agregarNumero(1);
+		pila.agregarNumero(2);
+		boolean resultado = pila.estaVacio();
+		assertThat(resultado,is(false));
+	}
 	
 	
 
