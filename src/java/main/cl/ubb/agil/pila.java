@@ -7,7 +7,7 @@ public class Pila {
 	
 	
 	public Pila(){
-		arreglo= new int[20];
+		arreglo= new int[2];
 		posicion=-1;
 	}
 	
@@ -18,9 +18,14 @@ public class Pila {
 			return false;
 	}
 	
-	public void agregarNumero(int numero){
+	public void agregarNumero(int numero) throws Exception{
+		if(arreglo.length-1==posicion)
+			throw new Exception("");
+		else{
 			posicion++;
 			arreglo[posicion]=numero;
+		}
+			
 	}
 	
 	public int tamano(){

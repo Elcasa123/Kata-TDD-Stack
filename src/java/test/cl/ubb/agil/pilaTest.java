@@ -15,14 +15,14 @@ public class PilaTest {
 	
 	
 	@Test
-	public void AgregarUnoStackNoVacio(){
+	public void AgregarUnoStackNoVacio() throws Exception{
 		Pila pila= new Pila();
 		pila.agregarNumero(1);
 		boolean resultado = pila.estaVacio();
 		assertThat(resultado,is(false));
 	}
 	
-	public void AgregarUnoYDosStackNoVacio(){
+	public void AgregarUnoYDosStackNoVacio() throws Exception{
 		Pila pila= new Pila();
 		pila.agregarNumero(1);
 		pila.agregarNumero(2);
@@ -30,7 +30,7 @@ public class PilaTest {
 		assertThat(resultado,is(false));
 	}
 	@Test
-	public void AgregarUnoYDosTamanoStackEsDos(){
+	public void AgregarUnoYDosTamanoStackEsDos() throws Exception{
 		Pila pila= new Pila();
 		pila.agregarNumero(1);
 		pila.agregarNumero(2);
@@ -70,6 +70,14 @@ public class PilaTest {
 		
 	}
 	
+	
+	@Test (expected=Exception.class)
+	public void AgregarNumeroAStackLlenoLanzaError() throws Exception{
+		Pila pila= new Pila();
+		pila.agregarNumero(1);
+		pila.agregarNumero(2);
+		pila.agregarNumero(3);
+	}
 	
 
 }
