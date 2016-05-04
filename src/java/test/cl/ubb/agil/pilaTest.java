@@ -79,5 +79,14 @@ public class PilaTest {
 		pila.agregarNumero(3);
 	}
 	
+	@Test
+	public void AgregarUnoYTopEsUno() throws Exception{
+		Pila pila= new Pila();
+		pila.agregarNumero(1);
+		
+		int resultado = pila.top();
+		assertThat(resultado,is(1));
+	}
+	
 
 }

@@ -38,5 +38,8 @@ public class Pila {
 		else
 			return arreglo[posicion--];
 	}
+	public int top(){
+		return arreglo[posicion];//codigo solo para probar prueba, no cumple con la funcion completa de pila
+	}
 
 }
