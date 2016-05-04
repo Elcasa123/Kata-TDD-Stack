@@ -53,6 +53,16 @@ public class PilaTest {
 		int resultado = pila.pop();
 		assertThat(resultado,is(2));
 	}
+	@Test
+	public void AgregarTresYCuatroYPopDosVecesEsCuatroYTres(){
+		Pila pila= new Pila();
+		pila.agregarNumero(3);
+		pila.agregarNumero(4);
+		String resultado="";
+		resultado+= pila.pop();
+		resultado+= pila.pop();
+		assertThat(resultado,is("43"));
+	}
 	
 	
 	
