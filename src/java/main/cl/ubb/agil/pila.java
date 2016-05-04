@@ -39,7 +39,14 @@ public class Pila {
 			return arreglo[posicion--];
 	}
 	public int top(){
-		return arreglo[posicion];//codigo solo para probar prueba, no cumple con la funcion completa de pila
+		return arreglo[posicion];//codigo solo para probar prueba 10 y 11, no cumple con la funcion completa de pila
+		/* 
+		 * codigo con condiciones de una pila
+		 int numero= arreglo[posicion];
+		 arreglo[poscion]=0;
+		 posicion--;
+		 return numero;
+		 */
 	}
 
 }

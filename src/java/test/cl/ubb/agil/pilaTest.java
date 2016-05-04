@@ -21,7 +21,7 @@ public class PilaTest {
 		boolean resultado = pila.estaVacio();
 		assertThat(resultado,is(false));
 	}
-	
+	@Test
 	public void AgregarUnoYDosStackNoVacio() throws Exception{
 		Pila pila= new Pila();
 		pila.agregarNumero(1);
@@ -87,6 +87,12 @@ public class PilaTest {
 		int resultado = pila.top();
 		assertThat(resultado,is(1));
 	}
-	
-
+	@Test
+	public void AgregarUnoYDosYTopEsDos() throws Exception{
+		Pila pila= new Pila();
+		pila.agregarNumero(1);
+		pila.agregarNumero(2);
+		int resultado = pila.top();
+		assertThat(resultado,is(2));
+	}
 }
