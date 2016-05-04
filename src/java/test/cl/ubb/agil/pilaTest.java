@@ -1,14 +1,16 @@
 package cl.ubb.agil;
 
 import static org.junit.Assert.*;
-
+import static org.hamcrest.CoreMatchers.is;
 import org.junit.Test;
 
-public class pilaTest {
+public class PilaTest {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void NuevoStackVacio() {
+		Pila pila= new Pila();
+		boolean resultado = pila.estaVacio();
+		assertThat(resultado,is(true));
 	}
 
 }
